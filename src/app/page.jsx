@@ -1,7 +1,11 @@
 import Image from "next/image";
+import Header from "./components/ui/Header";
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-center min-h-screen text-6xl">Начальная страница</div>
+    <div>
+      <Header />
+      Начальная страница
+    </div>
   );
 }

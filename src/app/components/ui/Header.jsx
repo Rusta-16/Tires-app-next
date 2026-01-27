@@ -8,7 +8,7 @@ export default function Header() {
         <nav className='flex gap-7 mx-auto'>
             <Link href={'/'} className='nav-link'>Главная</Link>
             <Link href={'/about'} className='nav-link'>О нас</Link>
-            <Link href={'/tires'} className='nav-link'>Колёса</Link>
+            <Link href={'/tires/all'} className='nav-link'>Колёса</Link>
         </nav>
         <Link href={'/logOut'} className='nav-link'>Логин</Link>
     </div>

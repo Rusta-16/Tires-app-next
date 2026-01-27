@@ -8,12 +8,22 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-
 }
 
 model Tires {
-  id Int @id @default(autoincrement())
-  width Int
+  id     Int @id @default(autoincrement())
+  width  Int
   height Int
   radius Int
+  price Int
+  quantity Int
+}
+
+model SellTires {
+  id     Int @id @default(autoincrement())
+  width  Int
+  height Int
+  radius Int
+  price Int
+  quantity Int
 }

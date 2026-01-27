@@ -14,12 +14,11 @@ const dancingScript = Dancing_Script({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="flex flex-col min-h-screen">
         <header>
-          <Header />
         </header>
-        <main>{children}</main>
-        <footer>
+        <main className="flex-1">{children}</main>
+        <footer className="mt-auto">
           <Footer />
         </footer>  
       </body>
