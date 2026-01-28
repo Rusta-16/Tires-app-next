@@ -5,15 +5,16 @@ import { redirect } from "next/navigation"
 
 export async function createItemTires(formData) {
 
-    const tire = await prisma.tires.create({
-        data: {
-            width: Number(formData.get('width')),
-            height: Number(formData.get('height')),
-            radius: Number(formData.get('radius')),
-            price: Number(formData.get('price')),
-            quantity: Number(formData.get('quantity'))
-        }
-    })
+    const data = {
+        width: Number(formData.get('width')),
+        height: Number(formData.get('height')),
+        radius: Number(formData.get('radius')),
+        price: Number(formData.get('price')),
+        quantity: Number(formData.get('quantity'))
+    }
+    if (data.quantity != 0 && data.price != 0 && data.radius != 0 && data.height != 0 && data.width !=0){
+        const tire = await prisma.tires.create({data})
+    }
     revalidatePath('/tires/all')
 
 }
